@@ -7,7 +7,7 @@ canvas.width = 300;
 const ctx = canvas.getContext("2d");
 
 //Create a new road object
-const road = new Road(canvas.width / 2, canvas.width * 0.95);
+const road = new Road(canvas.width / 2, canvas.width * 0.925);
 
 //create a car object
 const car = new Car(road.getLaneCenter(1), 150, 30, 50);
@@ -18,7 +18,7 @@ car.draw(ctx);
 animate();
 
 function animate() {
-  car.update();
+  car.update(road.borders);
   canvas.height = window.innerHeight;
 
   ctx.save();
