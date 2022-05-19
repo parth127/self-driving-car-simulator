@@ -1,7 +1,7 @@
 class Sensor {
   constructor(car) {
     this.car = car;
-    this.rayCount = 11;
+    this.rayCount = 9;
     this.rayLength = 200;
     this.raySpread = Math.PI / 2;
 
