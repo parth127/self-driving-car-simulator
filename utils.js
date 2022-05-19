@@ -22,3 +22,22 @@ function getIntersection(A, B, C, D) {
 
   return null;
 }
+
+function polyIntersect(poly1, poly2) {
+  for (let i = 0; i < poly1.length; i++) {
+    const A = poly1[i];
+    const B = poly1[(i + 1) % poly1.length];
+
+    for (let j = 0; j < poly2.length; j++) {
+      const C = poly2[j];
+      const D = poly2[(j + 1) % poly2.length];
+
+      const intersection = getIntersection(A, B, C, D);
+      if (intersection) {
+        return true;
+      }
+    }
+  }
+
+  return false;
+}
