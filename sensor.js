@@ -1,7 +1,7 @@
 class Sensor {
   constructor(car) {
     this.car = car;
-    this.rayCount = 5;
+    this.rayCount = 11;
     this.rayLength = 200;
     this.raySpread = Math.PI / 2;
 
@@ -49,6 +49,7 @@ class Sensor {
         }
       }
     }
+    11;
     if (touches.length === 0) {
       return null;
     } else {

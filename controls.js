@@ -1,9 +1,9 @@
 //Create a new class named Controls
 class Controls {
   constructor(controlType) {
+    this.forward = false;
     this.left = false;
     this.right = false;
-    this.forward = false;
     this.reverse = false;
 
     switch (controlType) {
